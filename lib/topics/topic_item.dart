@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_fireship/services/models.dart';
+import 'package:quiz_fireship/shared/animated_progress_bar.dart';
 import 'package:quiz_fireship/topics/topic_detail_screen.dart';
 
 class TopicItem extends StatelessWidget {
@@ -43,6 +44,7 @@ class TopicItem extends StatelessWidget {
                     ),
                   ),
                 ),
+                TopicProgress(topic: topic)
               ],
             ),
           ),

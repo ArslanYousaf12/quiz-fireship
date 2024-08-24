@@ -21,14 +21,16 @@ class Profile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: NetworkImage(
-                        user.photoURL ?? 'https://placehold.co/600x400'),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: NetworkImage(user.photoURL ?? ''),
+                    ),
                   ),
                 ),
               ),

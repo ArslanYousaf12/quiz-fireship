@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
+import 'package:quiz_fireship/quiz/quiz_provider.dart';
 import 'package:quiz_fireship/services/models.dart';
 import 'package:quiz_fireship/topics/topics.dart';
 
@@ -56,7 +57,11 @@ class QuizList extends StatelessWidget {
             borderRadius: BorderRadius.zero,
           ),
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return QuizScreen(quizId: quiz.id);
+              }));
+            },
             child: ListTile(
               title: Text(quiz.title),
               subtitle: Text(quiz.description),
