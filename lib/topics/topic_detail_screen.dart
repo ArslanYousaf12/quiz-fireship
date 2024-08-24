@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_fireship/services/models.dart';
+import 'package:quiz_fireship/topics/drawer.dart';
 
 class TopicDetailScreen extends StatelessWidget {
   const TopicDetailScreen({super.key, required this.topic});
@@ -28,6 +29,7 @@ class TopicDetailScreen extends StatelessWidget {
               fontSize: 20,
             ),
           ),
+          QuizList(topic: topic)
         ],
       ),
     );
